@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NewBlog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- header Nav med logo och About, samt plats för log out osv -->
+
+<ul>
+	<li><%= link_to "Blog", root_path %></li>
+</ul>
+
+<button><%= link_to "New Post", new_post_path %></button>
+<button>Log Out</button>
+
+<% flash.each do |name, msg|%>
+	<%= content_tag(:div, msg, class: "alert") %>
+<% end %>
+
+<%= yield %>
+
+<!-- Footer social links, eventuellt ha det i about också -->
+</body>
+</html>
