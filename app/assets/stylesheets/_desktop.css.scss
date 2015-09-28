@@ -1,0 +1,157 @@
+
+
+//Header
+header {
+	height: 50px;
+	width: 100%;
+	background-color: #101927;
+	padding: 0px 200px;
+	#name {
+		float: left;
+		margin-left: 15px;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		line-height: 50px;
+	}
+	a {
+		color: #fff;
+		&:hover {
+			transition: .5s;
+			color: #e52e22;
+		}
+		img {
+			height: 45px;
+			float: left;
+			margin-top: 2px;
+		}
+	}
+	ul {
+		float: right;
+		.margin-right {
+			margin-right: 40px;
+		}
+		li {
+			float: left;
+			line-height: 50px;
+			text-transform: uppercase;
+			font-size: 14px;
+			letter-spacing: 3px;
+		}
+	}
+}
+
+//Banner
+
+#homePage {
+	width: 100%;
+	#homeBannerBackground {
+		background: image-url("me-web.jpg") no-repeat center center;
+		background-size: cover;
+		width: 100%;
+		height: 500px;
+	}
+	#homeContent {
+		position: absolute;
+		top: 55%;
+		left: 55%;
+		h2 {
+			font-family: oswald-demibold;
+			font-size: 50px;
+		}
+	}
+}
+
+//Posts Section
+
+#postsPage {
+	min-height: 50%;
+	background-color: #eeeeee;
+	color: #101927;
+	font-family: 'Raleway', sans-serif;
+	hr {
+		width: 30px;
+		margin: 0 auto;
+		height: 1px;
+		border-radius: 1px;
+		background: #101927;
+	}
+	.postsContent {
+		text-align: center;
+		max-width: 500px;
+		margin: 20px auto;
+		h2 {
+			font-size: 30px;
+			a {
+				color: #101927;
+				&:hover {
+					transition: background 0.2s ease, color 0.2s ease, opacity 0.1s ease;
+					color: #e52e22;
+				}
+			}
+		}
+	}
+}
+
+
+footer {
+	height: 50px;
+	width: 100%;
+	background-color: #101927;
+	float: right;
+	padding: 0 200px;
+	#footer-icons{
+		ul {
+			float: left;
+			li {
+				float: right;
+				img {
+					height: 20px;
+					color: #fff;
+					-webkit-filter: invert(100%);
+					margin: 13px 10px 0 0;
+					&:hover {
+						transition: 0.4s;
+						-webkit-filter: invert(80%);
+					}
+				}
+			}
+		}
+	}
+	#footerCopy {
+		float:right;
+		p{
+			font-size: 11px;
+			line-height: 50px;
+		}
+	}
+}
+
+//INPUT
+input[type="text"], input[type="email"], input[type="password"], textarea {
+	width: 90%;
+	border: 1px solid #d6dce0;
+	border-radius: .35em;
+	margin-top: 10px;
+	padding: .5em 1em;
+	line-height: 1.75;
+}
+input[type="text"] {
+	height: 35px;
+}
+textarea {
+	min-height: 180px;
+}
+input[type="submit"] {
+	outline: none;
+	background: transparent;
+	border: 1px solid #d6dce0;
+	padding: .5em 1.5em;
+	font-size: 1.1em;
+	border-radius: 1.5em;
+	margin-left: .5em;
+	&:hover {
+		border: 1px solid #e52e22;
+		color: #e52e22;
+	}
+}

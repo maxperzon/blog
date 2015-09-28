@@ -1,0 +1,46 @@
+#about {
+	width: 100%;
+	min-height: 86%;
+	background: #eee;
+	color: #101927;
+	font-family: 'Raleway', sans-serif;
+	#aboutWrapper {
+		width: 70%;
+		min-height: 680px;
+		margin: 20px auto;
+		padding: 2.5% 2.5%;
+		#mePicture {
+			width: 48%;
+			height: 450px;
+			background: image-url("about_web.jpg") no-repeat center center;
+			background-size: cover;
+			float:left;
+		}
+		#meText{
+			float: right;
+			width: 48%;	
+			h1 {
+				font-family: oswald-demibold;
+				font-size: 100px;
+			}
+			#meTextContent {
+				margin-top: 40px;
+				p {
+				font-size: 13px;
+				margin-bottom: 10px;
+				a {
+					text-decoration: none;
+					color: #101927;
+					text-transform: uppercase;
+					font-size: 15px;
+					&:hover {
+						transition: background 0.2s ease, color 0.2s ease, opacity 0.1s ease;
+						color: #e52e22;
+						text-decoration: line-through;
+					}
+				}
+				}
+			}
+		}
+	}
+}

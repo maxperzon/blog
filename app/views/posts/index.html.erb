@@ -1,6 +1,20 @@
-<% @posts.each do |post|%>
-	<div class="post_wrapper">
-		<h2 class="title"><%= link_to post.title, post%></h2>
-		<p class="day"><%= post.created_at.strftime("%B, %d, %Y") %></p>
-	</div>
+<section id="homePage">
+		<div id="homeBannerBackground"></div>
+		<div id="homeContent">
+			<h2>my_BLOG</h2>
+		</div>
+</section>
+
+<section id="postsPage">
+<% @posts.each do |post| %>
+	<article>
+		<div class="postsContent">
+			<h2><%=link_to post.title, post%></h2>
+			<p><%=post.created_at.strftime("%B, %d, %Y")%></p>
+		</div>
+	</article>
+	<hr>
 <% end %>
+
+</section>
+

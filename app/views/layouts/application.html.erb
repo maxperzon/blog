@@ -3,19 +3,30 @@
 <head>
   <title>NewBlog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,500' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<!-- header Nav med logo och About, samt plats för log out osv -->
+<header>
+	<a href="/" id="icon">
+		<%= image_tag('logo.png') %>
+		<h2 id="name">Max Perzon</h2>
+	</a>
+	
+	<ul id="menu">
+		<% if user_signed_in? %>
+			<li class="margin-right"><%=link_to "New Post", new_post_path%></li>
+			<li class="margin-right">
+				<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+			</li>
+		<% end %>
+		<li class="margin-right"><%=link_to "About", about_path%></li>
+		<li><%=link_to "Portfolio", "http://maxperzon.se", {target: '_blank'}%></li>
+	</ul>
+</header>
 
-<ul>
-	<li><%= link_to "Blog", root_path %></li>
-</ul>
-
-<button><%= link_to "New Post", new_post_path %></button>
-<button>Log Out</button>
 
 <% flash.each do |name, msg|%>
 	<%= content_tag(:div, msg, class: "alert") %>
@@ -23,6 +34,18 @@
 
 <%= yield %>
 
-<!-- Footer social links, eventuellt ha det i about också -->
+<footer>
+	<div id="footer-icons">
+		<ul>
+			<li><a href="http://se.linkedin.com/pub/max-perzon/b4/707/441" target="_blank"><%= image_tag('linkedin.png') %></a></li>
+			<li><a href="https://github.com/maxperzon" target="_blank"><%= image_tag('github.png') %></a></li>
+			<li><a href="https://twitter.com/maxperzon" target="_blank"><%= image_tag('twitter.png') %></a></li>
+		</ul>
+	</div>
+	<div id="footerCopy">
+		<p>© 2015 Max Perzon</p>
+	</div>
+</footer>
+
 </body>
 </html>

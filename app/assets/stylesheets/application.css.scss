@@ -14,4 +14,33 @@
  *= require_self
  */
 
-@import 'normalize';
+@font-face {
+    font-family: oswald-demibold;
+    src: url(../font/Oswald-DemiBold.ttf);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+$red: #e52e22;
+
+body {
+	font-family: 'Raleway', sans-serif;
+	background:#101927;
+	color: #fff;
+	section {
+		width:100%;
+		float:left;
+		position:relative;
+	}
+}
+@import 'reset';
+
+@media only screen and (min-width:1025px) {
+	@import 'desktop';
+	@import 'about';
+	@import 'post';
+	@import 'pygments';
+	@import 'login';
+}
+
+

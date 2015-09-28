@@ -1,0 +1,30 @@
+#logIn {
+	width: 100%;
+	height: 86%;
+	background-color: #eee;
+	color: #101927;
+	font-family: 'Raleway', sans-serif;
+	float: right;
+	#logInWrapper {
+		padding-top: 50px;
+		width: 70%;
+		margin: 0 auto;
+		min-height: 500px;
+		h1 {
+			font-family: oswald-demibold;
+			font-size: 200px;
+			text-transform: uppercase;
+			text-align: center;
+		}
+		#logInForm {
+			width: 20%;
+			margin: 0 auto;
+			.field {
+				margin-bottom: 15px;
+			}
+			.actions {
+				text-align: center;
+			}
+		}
+	}
+}
